@@ -11,6 +11,6 @@ RUN \
 RUN \
   apk add --no-cache \
     python3 py3-pip
-    
+RUN ls    
 # Copy root filesystem
 COPY rootfs /
