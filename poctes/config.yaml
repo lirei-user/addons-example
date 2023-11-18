@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Example add-on
-version: "1.2.2"
+version: "1.2.3"
 slug: example
 description: POCTES add-on
 url: "https://github.com/lirei-user/addons-example/tree/main/poctes"
@@ -15,6 +15,15 @@ map:
   - share:rw
 options:
   message: "Hello world..."
+  logins:
+    - username: beer
+      password: "123456"
+  random:
+    - haha
+    - hihi
+  link: "http://example.com/"
+  size: 15
+  count: 1.2
 schema:
   message: "str?"
 image: "ghcr.io/lirei-user/{arch}-addon-poctes"
