@@ -11,6 +11,6 @@ RUN \
 RUN \
   apk add --no-cache \
     python3 py3-pip
-RUN ls    
+RUN pip install astarte-device-sdk==0.12.0    
 # Copy root filesystem
 COPY rootfs /
