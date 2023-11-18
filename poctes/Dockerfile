@@ -15,3 +15,10 @@ RUN pip install astarte-device-sdk==0.12.0
 
 # Copy root filesystem
 COPY rootfs /
+# Python 3 HTTP Server serves the current working dir
+# So let's set it to our add-on persistent data directory.
+WORKDIR /data
+# Copy data for add-on
+COPY /src/ /
+RUN chmod a+x /run.sh
+CMD [ "/run.sh" ]
