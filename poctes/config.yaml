@@ -3,7 +3,7 @@ name: Example add-on
 version: "1.2.3"
 slug: example
 description: POCTES add-on
-url: "https://github.com/lirei-user/addons-example/tree/main/poctes"
+url: "https://github.com/lirei-user/addons-poctes/tree/main/poctes"
 arch:
   - armhf
   - armv7
