@@ -7,10 +7,11 @@ ARG TEMPIO_VERSION BUILD_ARCH
 RUN \
     curl -sSLf -o /usr/bin/tempio \
     "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
-    
+
 RUN \
   apk add --no-cache \
     python3 py3-pip
-RUN pip install astarte-device-sdk==0.12.0    
+RUN pip install astarte-device-sdk==0.12.0
+RUN pip list
 # Copy root filesystem
 COPY rootfs /
