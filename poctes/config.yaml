@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Example add-on
-version: "1.2.5"
+version: "1.2.6"
 slug: example
 description: POCTES add-on
 url: "https://github.com/lirei-user/addons-poctes/tree/main/poctes"
@@ -14,16 +14,26 @@ init: false
 map:
   - share:rw
 options:
-  message: "Hello world..."
-  logins:
-    - username: beer
-      password: "123456"
-  random:
-    - haha
-    - hihi
-  link: "http://example.com/"
-  size: 15
-  count: 1.2
+  update: false
+  piptoken: ""
+  projectid: ""
+  aconfig:
+    device_id: ""
+    realm: ""
+    credentials_secret: ""
+    pairing_base_url: ""
+    persistency_dir: "."
+  interface: "{}"
 schema:
-  message: "str?"
+  update: bool
+  piptoken: "str?"
+  projectid: "str?"
+  aconfig:
+    device_id: "str?"
+    realm: "str?"
+    credentials_secret: "str?"
+    pairing_base_url: "str?"
+    persistency_dir: "str?"
+  interface: "str?"
+
 image: "ghcr.io/lirei-user/{arch}-addon-poctes"
